@@ -48,7 +48,7 @@ pycodestyle==2.6.0
 pycparser==2.20
 Pygments==2.9.0
 pyobjc==7.3
-pyobjc-core==7.3
+# pyobjc-core==7.3
 pyobjc-framework-Accessibility==7.3
 pyobjc-framework-Accounts==7.3
 pyobjc-framework-AddressBook==7.3
@@ -69,7 +69,7 @@ pyobjc-framework-CallKit==7.3
 pyobjc-framework-CFNetwork==7.3
 pyobjc-framework-ClassKit==7.3
 pyobjc-framework-CloudKit==7.3
-pyobjc-framework-Cocoa==7.3
+# pyobjc-framework-Cocoa==7.3
 pyobjc-framework-Collaboration==7.3
 pyobjc-framework-ColorSync==7.3
 pyobjc-framework-Contacts==7.3
@@ -148,7 +148,7 @@ pyobjc-framework-Photos==7.3
 pyobjc-framework-PhotosUI==7.3
 pyobjc-framework-PreferencePanes==7.3
 pyobjc-framework-PushKit==7.3
-pyobjc-framework-Quartz==7.3
+# pyobjc-framework-Quartz==7.3
 pyobjc-framework-QuickLookThumbnailing==7.3
 pyobjc-framework-ReplayKit==7.3
 pyobjc-framework-SafariServices==7.3
