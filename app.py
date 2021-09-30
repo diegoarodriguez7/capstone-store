@@ -17,9 +17,6 @@ app.config["UPLOADED_IMAGES_DEST"] = "uploads/images"
 
 
 
-
-
-
 connect_db(app)
 
 # Set image storage information
