@@ -8,14 +8,15 @@ from sqlalchemy import asc, desc
 import json
 import os
 import stripe
+import psycopg2
 
 app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///shop_db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["SQLALCHEMY_ECHO"] = False
+app.config["SQLALCHEMY_ECHO"] = True
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'amamamama')
 app.config["UPLOADED_IMAGES_DEST"] = "uploads/images"
-
-
 
 connect_db(app)
 
@@ -240,7 +241,7 @@ def add():
             image = form.image.data
 
             if image == None:
-                img_url = 'https://upload.wikimedia.org/wikipedia/en/thumb/6/65/Happy_fun_ball.jpg/300px-Happy_fun_ball.jpg'
+                img_url = 'https://images.unsplash.com/photo-1633296453613-94b169c2e525?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80'
             else:
                 # Show URL
                 img_url = images.url(images.save(image))

@@ -8,17 +8,18 @@ bcrypt = Bcrypt()
 
 def connect_db(app):
     """Connect to database."""
-
     db.app = app
     db.init_app(app)
 
 
 class User(db.Model):
+    
+    __tablename__ = 'store'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(20), nullable=False,  unique=True)
-    password = db.Column(db.String(), nullable=False)
-    email = db.Column(db.String(120))
+    password = db.Column(db.String(20), nullable=False)
+    email = db.Column(db.String(20))
 
     @classmethod
     def register(cls, username, pwd, email):
@@ -123,3 +124,6 @@ class Order_Item(db.Model):
     order_id = db.Column(db.Integer, db.ForeignKey('order.id'))
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'))
     quantity = db.Column(db.Integer)
+
+
+
