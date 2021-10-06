@@ -26,7 +26,7 @@ configure_uploads(app, images)
 patch_request_class(app, 1024 * 1024)
 
 # Stripe secret key
-stripe.api_key = "sk_test_HjmEiebcMzZHRfIBgPfeWPeO00Af8WCWzO"
+stripe.api_key = 'pk_test_51JanYjLhxVHD1FOp86EV5oqU9KRQanYdTm5s0FpZvU0U5IuEWmdCQkxb0zeJTmZN2qoreogVTQGmWtGI8hi2jlmo00A05wetmf'
 
 
 @app.route('/')
